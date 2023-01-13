@@ -105,7 +105,7 @@ public class Main {
 
         List<Mechanic> mechanicsAL = new ArrayList<>(List.of(mechIvan, mechVasya, mechPetya));
         List<Transport> transports = new ArrayList<>(List.of(carLada, busIcarus, trucksZil));
-        List<Driver> drivers = new ArrayList<>(List.of(driverBob, driverCharles, driverDen));
+        List<Driver> driversAL = new ArrayList<>(List.of(driverBob, driverCharles, driverDen));
         System.out.println(mechanicsAL);
 
         busIcarus.setMechanics(mechVasya);
@@ -130,6 +130,23 @@ public class Main {
 
         System.out.println( mechanicsHM.keySet());
         System.out.println( busIcarus.equals(busIcarus) + "  " + busIcarus.equals(busLiaz));
+
+        //  вывод в консоль домашки - Коллекции. Set. Iterator
+
+        Set<Driver> driversHS = new HashSet<>(){
+            {   add( driverBob);
+                add(driverCharles);
+
+                add(driverDen);
+                add(driverDen);
+                add(driverDen); }};
+
+        Iterator<Driver> itr = driversHS.iterator();
+        while (itr.hasNext())
+            System.out.println( itr.next() );
+
+
+
 
     }
 }
